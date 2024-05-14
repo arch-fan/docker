@@ -3,7 +3,9 @@ version: '3.8'
 services:
   privatebin:
     image: privatebin/nginx-fpm-alpine
-    container_name: privatebin 
+    container_name: privatebin
+    networks:
+      - proxied
     restart: unless-stopped
 
 networks:

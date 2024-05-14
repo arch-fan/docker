@@ -1,14 +1,2 @@
 # Ignora todos los archivos
-/*
-!filebrowser/
-!nginx/
-!hollywood
-!minecraft
-!mysql-phpmyadmin
-!pihole
-!privatebin
-!qbittorrent
-!samba
-!wireguard
-!ytd
 **/.env
