@@ -4,9 +4,17 @@ services:
   nginx:
     image: nginx:latest
     container_name: nginx
-    network_mode: host
+    networks:
+      - proxied
+    ports:
+      - 80:80
+      - 443:443
     volumes:
-      - ${PWD}/www:/usr/share/nginx/html
-      - ${PWD}/nginx:/etc/nginx/
+      - ./www:/usr/share/nginx/html
+      - ./nginx:/etc/nginx/
       - /ssl:/ssl
     restart: unless-stopped
+
+networks:
+  proxied:
+    external: true

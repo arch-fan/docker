@@ -11,7 +11,7 @@ server {
 
     client_body_buffer_size 10K;
     client_header_buffer_size 1k;
-    client_max_body_size 8m;
+    client_max_body_size 100g;
     large_client_header_buffers 2 1k;
 
     error_page 404 /404.html;

@@ -6,8 +6,8 @@ services:
     volumes:
       - /hdd-data:/srv
       - ./database.db:/database.db
-    user: "${UID:-1000}:${GID:-1000}"
+    user: 1000
     ports:
       - "5000:80"
-    restart: on-failure
+    restart: unless-stopped
 
