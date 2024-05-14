@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  wg-easy:
+    image: weejewel/wg-easy
+    container_name: wg-easy
+    ports:
+      - 51820:51820/udp
+      - 51821:51821/tcp
+    volumes:
+      - ./config:/etc/wireguard
+    environment:
+      WG_HOST: wireguard.arch-fan.com
+      PASSWORD: ${PASSWORD}
+      WG_DEFAULT_DNS: 192.168.1.224, 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 80.58.61.250, 80.58.61.254
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+      - net.ipv4.ip_forward=1
+    restart: unless-stopped
+

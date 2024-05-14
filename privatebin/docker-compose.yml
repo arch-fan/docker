@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  privatebin:
+    image: privatebin/nginx-fpm-alpine
+    container_name: privatebin 
+    restart: unless-stopped
+
+networks:
+  proxied:
+    external: true

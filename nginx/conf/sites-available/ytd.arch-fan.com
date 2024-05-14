@@ -22,7 +22,7 @@ server {
     #}
 
     location / {
-        proxy_pass http://localhost:8998;
+        proxy_pass http://metube:8081;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
