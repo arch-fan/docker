@@ -1,5 +1,5 @@
 server {
-    listen 443 ssl ;
+    listen 443 ssl;
     http2 on;
     server_name drive.arch-fan.com;
 
@@ -22,7 +22,7 @@ server {
     #}
 
     location / {
-        proxy_pass http://localhost:5000;
+        proxy_pass http://filebrowser:80;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';

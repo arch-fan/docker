@@ -1,13 +1,16 @@
-version: '3.3'
+version: '3.8'
 services:
   filebrowser:
     image: filebrowser/filebrowser
     container_name: filebrowser
+    networks:
+      - proxied
     volumes:
       - /hdd-data:/srv
       - ./database.db:/database.db
-    user: 1000
-    ports:
-      - "5000:80"
+    user: "1000"
     restart: unless-stopped
 
+networks:
+  proxied:
+    external: true

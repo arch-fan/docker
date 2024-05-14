@@ -1,0 +1,1 @@
+../sites-available/wireguard-arch-fan.com
