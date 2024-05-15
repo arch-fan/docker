@@ -8,7 +8,7 @@ services:
     volumes:
       - /hdd-data:/srv
       - ./database.db:/database.db
-    user: "1000"
+    user: "1000:1000"
     restart: unless-stopped
 
 networks:
