@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    image: archhfan/health-check:latest
+    container_name: health-check
+    restart: unless-stopped
+    networks:
+      - proxied
+
+networks:
+  proxied:
+    external: true
