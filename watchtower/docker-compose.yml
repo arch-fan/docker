@@ -7,6 +7,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      WATCHTOWER_SCHEDULE: 0 5 * * *
+      WATCHTOWER_SCHEDULE: 0 0 5 * * *
       TZ: Europe/Madrid
     restart: unless-stopped
