@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ipsec-vpn-server:
+    image: hwdsl2/ipsec-vpn-server
+    container_name: ipsec-vpn-server
+    privileged: true
+    env_file: .env
+    restart: always
+    environment:
+      - VPN_IKEV2_ONLY=yes
+    volumes:
+      - ./data:/etc/ipsec.d
+      - /lib/modules:/lib/modules:ro
+    ports:
+      - 500:500/udp
+      - 4500:4500/udp
