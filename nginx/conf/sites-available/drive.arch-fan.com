@@ -1,7 +1,7 @@
 server {
     listen 443 ssl;
     http2 on;
-    server_name drive.arch-fan.com;
+    server_name drive.archfan.com;
 
     gzip on;
     gzip_vary on;
