@@ -9,9 +9,9 @@ services:
       - 51821:51821/tcp
     volumes:
       - ./config:/etc/wireguard
+    env_file: .env
     environment:
       WG_HOST: wireguard.archfan.com
-      PASSWORD: ${PASSWORD}
       WG_DEFAULT_DNS: 192.168.1.224, 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 80.58.61.250, 80.58.61.254
     cap_add:
       - NET_ADMIN

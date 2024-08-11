@@ -8,11 +8,11 @@ services:
     volumes:
       - /hdd-data:/share
     ports:
-      - "139:139"
-      - "445:445"
+      - 139:139
+      - 445:445
     environment:
-      USER: "${USER};${PASSWORD}"
-      SHARE: "Toshiba;/share;yes;no;no;pi"
-      TZ: "Europe/Madrid"
+      USER: ${USER};${PASSWORD}
+      SHARE: Toshiba;/share;yes;no;no;pi
+      TZ: Europe/Madrid
       USERID: 1000
       GROUPID: 1000

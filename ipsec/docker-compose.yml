@@ -8,7 +8,7 @@ services:
     env_file: .env
     restart: always
     environment:
-      - VPN_IKEV2_ONLY=yes
+      VPN_IKEV2_ONLY: yes
     volumes:
       - ./data:/etc/ipsec.d
       - /lib/modules:/lib/modules:ro
