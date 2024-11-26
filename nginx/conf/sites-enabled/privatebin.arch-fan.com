@@ -1,0 +1,1 @@
+../sites-available/privatebin.arch-fan.com

@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   ipsec-vpn-server:
     image: hwdsl2/ipsec-vpn-server
